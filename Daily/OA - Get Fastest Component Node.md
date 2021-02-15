@@ -1,3 +1,25 @@
+We have a tree where each node's value represent how much work it has done, each of its child
+can be seen as its component. The measurement of how fast each node is calculated by taking 
+the average number of work done by each node and all its subcomponents. We want to find the 
+fastest component among all components that have one or more subcomponents. Assume there will 
+be at least one subcomponent in the tree and there will be no ties.
+
+###### Example
+
+```
+Input:
+rootComponent:
+            200
+           /   \
+        120     180
+       / | \    /  \
+     110 20 30 150  80
+
+Output:
+180
+```
+
+
 ```java
 // "static void main" must be defined in a public class.
 
