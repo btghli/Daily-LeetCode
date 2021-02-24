@@ -46,12 +46,27 @@ public class Main {
     }
     
     // this algorithm expands two node at each step, therefore it takes O(2^n) time
+    // c(n,m) = c(n-1,m-1) + c(n-1,m)
     private static int countCombination(int n, int m) {
         if (m == 0 || n == m) {
             return 1;
         }
         return countCombination(n - 1, m) + countCombination(n - 1, m - 1);
     }
+    
+    // Use math formular of counting combination
+    private static int countCombination2(int n, int k) {
+        int a=1,b=1;
+        if(k>n/2) {
+            k=n-k;
+        }
+        for(int i=1;i<=k;i++) {
+            a*=(n+1-i);
+            b*=i;
+        }
+        return a/b;
+    }
+
     
     public static void main(String[] args) {
         int num = 5;
@@ -73,3 +88,5 @@ public class Main {
     }
 }
 ```
+
+[via: Baidu Baike](https://baike.baidu.com/item/%E7%BB%84%E5%90%88%E6%95%B0%E5%85%AC%E5%BC%8F)
