@@ -24,6 +24,8 @@ Output:
 
 ***
 
+##### Time Complexity: O(n*2^n)
+
 ```java
 public class Main {
     public static int countTeams(int num, List<Integer> skills, int minAssociates, int minLevel, int maxLevel) {
@@ -43,6 +45,7 @@ public class Main {
         return res;
     }
     
+    // this algorithm expands two node at each step, therefore it takes O(2^n) time
     private static int countCombination(int n, int m) {
         if (m == 0 || n == m) {
             return 1;
