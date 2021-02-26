@@ -67,6 +67,45 @@ public class Main {
         return new long[]{cur_num, cur_sum};
     }
     
+    // Use global variable insteading of return array
+    /*
+    public static ComponentNode getNode(ComponentNode root){
+        if(root == null || root.components == null || root.components.size() == 0)
+            return root;
+        getAverage(root);
+        return res;
+    }
+    
+    static long sub_num = 0, sub_sum = 0;
+    
+    public static void getAverage(ComponentNode root){
+        if(root.components == null || root.components.size() == 0){
+            sub_num = 1;
+            sub_sum = root.value;
+            return;
+        }
+        
+        long cur_num = 1;
+        long cur_sum = root.value;
+        
+        for(ComponentNode node : root.components){
+            getAverage(node);
+            cur_num += sub_num;
+            cur_sum += sub_sum;
+        }
+        
+        if(cur_sum / cur_num > max){
+            max = (double)cur_sum / (double)cur_num;
+            res = root;
+        }
+        
+        sub_num = cur_num;
+        sub_sum = sub_sum;
+        
+        return;
+    }
+    */
+    
     public static void main(String[] args) {
         ComponentNode root1 = new ComponentNode(1);
         ComponentNode root2 = new ComponentNode(2);
