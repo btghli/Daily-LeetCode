@@ -93,7 +93,7 @@ public class Main {
         }
         
         sub_num = cur_num;
-        sub_sum = sub_sum;
+        sub_sum = cur_sum;
         
         return;
     }
