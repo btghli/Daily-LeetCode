@@ -44,6 +44,7 @@ public class Main {
         if(root == null || root.components == null || root.components.size() == 0)
             return root;
         long[] ans = getAverage(root);
+        // getAverage(root);
         return res;
     }
     
@@ -67,15 +68,7 @@ public class Main {
         return new long[]{cur_num, cur_sum};
     }
     
-    // Use global variable insteading of return array
-    /*
-    public static ComponentNode getNode(ComponentNode root){
-        if(root == null || root.components == null || root.components.size() == 0)
-            return root;
-        getAverage(root);
-        return res;
-    }
-    
+    // Used global variables instead of returning a long array on each level
     static long sub_num = 0, sub_sum = 0;
     
     public static void getAverage(ComponentNode root){
@@ -104,7 +97,6 @@ public class Main {
         
         return;
     }
-    */
     
     public static void main(String[] args) {
         ComponentNode root1 = new ComponentNode(1);
